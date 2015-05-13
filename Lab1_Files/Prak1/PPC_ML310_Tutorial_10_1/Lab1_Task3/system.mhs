@@ -1,0 +1,149 @@
+
+# ##############################################################################
+# Created by Base System Builder Wizard for Xilinx EDK 10.1.03 Build EDK_K_SP3.6
+# Tue Apr 29 18:31:10 2014
+# Target Board:  Xilinx Virtex-II Pro ML310 Evaluation Platform Rev D
+# Family:    virtex2p
+# Device:    xc2vp30
+# Package:   ff896
+# Speed Grade:  -6
+# Processor: ppc405_0
+# Processor clock frequency: 100.00 MHz
+# Bus clock frequency: 100.00 MHz
+# On Chip Memory :  24 KB
+# ##############################################################################
+# ##############################################################################
+# Template for PPC405 v3 with PLBv46 bus interface
+# ##############################################################################
+ PARAMETER VERSION = 2.1.0
+
+
+ PORT fpga_0_RS232_Uart_RX_pin = fpga_0_RS232_Uart_RX, DIR = I
+ PORT fpga_0_RS232_Uart_TX_pin = fpga_0_RS232_Uart_TX, DIR = O
+ PORT fpga_0_ORGate_1_Res_pin = fpga_0_ORGate_1_Res, DIR = O
+ PORT fpga_0_ORGate_1_Res_1_pin = fpga_0_ORGate_1_Res, DIR = O
+ PORT fpga_0_ORGate_1_Res_2_pin = fpga_0_ORGate_1_Res, DIR = O
+ PORT sys_clk_pin = dcm_clk_s, DIR = I, SIGIS = CLK, CLK_FREQ = 100000000
+ PORT sys_rst_pin = sys_rst_s, DIR = I, RST_POLARITY = 0, SIGIS = RST
+# USER added
+ PORT led_pin = led_blinker, DIR = O
+
+
+BEGIN ppc405
+ PARAMETER INSTANCE = ppc405_0
+ PARAMETER HW_VER = 3.00.a
+ PARAMETER C_FASTEST_PLB_CLOCK = DPLB0
+ BUS_INTERFACE DPLB0 = plb0
+ BUS_INTERFACE IPLB0 = plb0
+ BUS_INTERFACE JTAGPPC = jtagppc_cntlr_0_0
+ BUS_INTERFACE RESETPPC = ppc_reset_bus
+ PORT CPMC405CLOCK = sys_clk_s
+END
+
+BEGIN jtagppc_cntlr
+ PARAMETER INSTANCE = jtagppc_cntlr_0
+ PARAMETER HW_VER = 2.01.c
+ BUS_INTERFACE JTAGPPC0 = jtagppc_cntlr_0_0
+END
+
+BEGIN plb_v46
+ PARAMETER INSTANCE = plb0
+ PARAMETER C_DCR_INTFCE = 0
+ PARAMETER C_NUM_CLK_PLB2OPB_REARB = 100
+ PARAMETER HW_VER = 1.03.a
+ PORT PLB_Clk = sys_clk_s
+ PORT SYS_Rst = sys_bus_reset
+END
+
+BEGIN xps_bram_if_cntlr
+ PARAMETER INSTANCE = xps_bram_if_cntlr_1
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_SPLB_NATIVE_DWIDTH = 64
+ PARAMETER C_BASEADDR = 0xffffc000
+ PARAMETER C_HIGHADDR = 0xffffffff
+ BUS_INTERFACE SPLB = plb0
+ BUS_INTERFACE PORTA = xps_bram_if_cntlr_1_port
+END
+
+BEGIN bram_block
+ PARAMETER INSTANCE = plb_bram_if_cntlr_1_bram
+ PARAMETER HW_VER = 1.00.a
+ BUS_INTERFACE PORTA = xps_bram_if_cntlr_1_port
+END
+
+BEGIN xps_uartlite
+ PARAMETER INSTANCE = RS232_Uart
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BAUDRATE = 9600
+ PARAMETER C_DATA_BITS = 8
+ PARAMETER C_ODD_PARITY = 0
+ PARAMETER C_USE_PARITY = 0
+ PARAMETER C_SPLB_CLK_FREQ_HZ = 100000000
+ PARAMETER C_BASEADDR = 0x84000000
+ PARAMETER C_HIGHADDR = 0x8400ffff
+ BUS_INTERFACE SPLB = plb0
+ PORT RX = fpga_0_RS232_Uart_RX
+ PORT TX = fpga_0_RS232_Uart_TX
+END
+
+BEGIN xps_bram_if_cntlr
+ PARAMETER INSTANCE = xps_bram_if_cntlr_2
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_SPLB_NATIVE_DWIDTH = 32
+ PARAMETER C_BASEADDR = 0x00000000
+ PARAMETER C_HIGHADDR = 0x00001fff
+ BUS_INTERFACE SPLB = plb0
+ BUS_INTERFACE PORTA = xps_bram_if_cntlr_2_port
+END
+
+BEGIN bram_block
+ PARAMETER INSTANCE = xps_bram_if_cntlr_2_bram
+ PARAMETER HW_VER = 1.00.a
+ BUS_INTERFACE PORTA = xps_bram_if_cntlr_2_port
+END
+
+BEGIN util_reduced_logic
+ PARAMETER INSTANCE = ORGate_1
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_OPERATION = or
+ PARAMETER C_SIZE = 2
+ PORT Op1 = sys_rst_s & 0b0
+ PORT Res = fpga_0_ORGate_1_Res
+END
+
+BEGIN clock_generator
+ PARAMETER INSTANCE = clock_generator_0
+ PARAMETER HW_VER = 2.01.a
+ PARAMETER C_EXT_RESET_HIGH = 1
+ PARAMETER C_CLKIN_FREQ = 100000000
+ PARAMETER C_CLKOUT0_FREQ = 100000000
+ PARAMETER C_CLKOUT0_BUF = TRUE
+ PARAMETER C_CLKOUT0_PHASE = 0
+ PARAMETER C_CLKOUT0_GROUP = NONE
+ PORT CLKOUT0 = sys_clk_s
+ PORT CLKIN = dcm_clk_s
+ PORT LOCKED = Dcm_all_locked
+ PORT RST = net_gnd
+END
+
+BEGIN proc_sys_reset
+ PARAMETER INSTANCE = proc_sys_reset_0
+ PARAMETER HW_VER = 2.00.a
+ PARAMETER C_EXT_RESET_HIGH = 0
+ BUS_INTERFACE RESETPPC0 = ppc_reset_bus
+ PORT Slowest_sync_clk = sys_clk_s
+ PORT Dcm_locked = Dcm_all_locked
+ PORT Ext_Reset_In = sys_rst_s
+ PORT Bus_Struct_Reset = sys_bus_reset
+ PORT Peripheral_Reset = sys_periph_reset
+END
+
+BEGIN blinker
+ PARAMETER INSTANCE = blinker_0
+ PARAMETER HW_VER = 1.00.a
+# USER added
+ PORT user_clk = sys_clk_s
+ PORT user_reset = sys_rst_s
+ PORT led = led_blinker
+END
+

@@ -1,0 +1,16 @@
+ The following files will be modified:
+  system.mhs
+  system.mss
+
+--------------------------------------
+ The following changes will be made:
+ Core jtagppc_cntlr 2.01.a will be replaced by 2.01.c
+
+ Driver cpu_ppc405 1.10.a will be replaced by 1.10.b
+ Driver uartlite 1.12.a will be replaced by 1.13.a
+ Driver gpio 2.11.a will be replaced by 2.12.a
+ Driver intc 1.10.c will be replaced by 1.11.a
+--------------------------------------
+ The following changes need to be made manually by the user:
+ Core ppc405 2.00.c needs to be replaced by 3.00.a
+ Core proc_sys_reset 1.00.a needs to be replaced by 2.00.a

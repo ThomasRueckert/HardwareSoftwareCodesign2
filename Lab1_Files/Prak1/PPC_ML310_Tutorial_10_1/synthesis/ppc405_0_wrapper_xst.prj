@@ -1,0 +1,8 @@
+verilog ppc405_v3_00_a C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v3_00_a/hdl/verilog/mpmc2_sample_cycle.v
+vhdl ppc405_v3_00_a C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v3_00_a/hdl/vhdl/dplb_plbv46_adapter.vhd
+vhdl ppc405_v3_00_a C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v3_00_a/hdl/vhdl/iplb_plbv46_adapter.vhd
+vhdl ppc405_v3_00_a C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v3_00_a/hdl/vhdl/dplb_replicator.vhd
+vhdl ppc405_v3_00_a C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v3_00_a/hdl/vhdl/iplb_replicator.vhd
+vhdl ppc405_v3_00_a C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v3_00_a/hdl/vhdl/ppc405_wrap.vhd
+vhdl ppc405_v3_00_a C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v3_00_a/hdl/vhdl/ppc405_top.vhd
+vhdl work ../hdl/ppc405_0_wrapper.vhd

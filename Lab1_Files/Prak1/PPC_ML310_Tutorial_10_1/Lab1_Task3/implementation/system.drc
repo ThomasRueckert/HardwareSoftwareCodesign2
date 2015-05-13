@@ -1,0 +1,35 @@
+WARNING:PhysDesignRules:367 - The signal
+   <xps_bram_if_cntlr_2_port_BRAM_Addr<31>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <xps_bram_if_cntlr_2_port_BRAM_Addr<30>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <xps_bram_if_cntlr_1_port_BRAM_Addr<31>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <xps_bram_if_cntlr_1_port_BRAM_Addr<30>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:1009 - Blockcheck: The clock pin BRAMISOCMCLK for the
+   comp ppc405_0/ppc405_0/PPC405_i/PPC405_i is not connected to the output of a
+   DCM driven clock buffer.
+WARNING:PhysDesignRules:1009 - Blockcheck: The clock pin BRAMDSOCMCLK for the
+   comp ppc405_0/ppc405_0/PPC405_i/PPC405_i is not connected to the output of a
+   DCM driven clock buffer.
+WARNING:PhysDesignRules:1009 - Blockcheck: The clock pin CPMC405CLOCK for the
+   comp
+   jtagppc_cntlr_0/jtagppc_cntlr_0/auto_ppc_connectivity.auto_PPC405.PPC_auto_i0
+   is not connected to the output of a DCM driven clock buffer.
+WARNING:PhysDesignRules:1009 - Blockcheck: The clock pin PLBCLK for the comp
+   jtagppc_cntlr_0/jtagppc_cntlr_0/auto_ppc_connectivity.auto_PPC405.PPC_auto_i0
+   is not connected to the output of a DCM driven clock buffer.
+WARNING:PhysDesignRules:1009 - Blockcheck: The clock pin BRAMISOCMCLK for the
+   comp
+   jtagppc_cntlr_0/jtagppc_cntlr_0/auto_ppc_connectivity.auto_PPC405.PPC_auto_i0
+   is not connected to the output of a DCM driven clock buffer.
+WARNING:PhysDesignRules:1009 - Blockcheck: The clock pin BRAMDSOCMCLK for the
+   comp
+   jtagppc_cntlr_0/jtagppc_cntlr_0/auto_ppc_connectivity.auto_PPC405.PPC_auto_i0
+   is not connected to the output of a DCM driven clock buffer.
+DRC detected 0 errors and 10 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

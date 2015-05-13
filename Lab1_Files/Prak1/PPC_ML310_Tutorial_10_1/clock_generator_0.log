@@ -1,0 +1,66 @@
+/**
+ * clock_generator_0.log
+ */
+
+        
+    Running clock generation algorithm ...
+    For FAMILY is other than virtex5, using DCM architecture
+    Step 1: Try to generate required clocks that:
+      { Frequency: 0Hz < frequency <= 400MHz
+        Phase: 90 or 270 degree
+        Group: DCM0 ot DCM1 or DCM2 or DCM3
+        Not external feedback
+      }
+    Step 2: Try to generate required clocks that:
+      { Frequency: 0Hz < frequency <= 400MHz
+        Phase: 0 or 180 degree
+        Group: DCM0 ot DCM1 or DCM2 or DCM3
+        Not external feedback
+      }
+    Step 3: Try to generate required clocks that:
+      { Frequency: 0Hz < frequency <= 400MHz
+        Phase: Non 0|90|180|270 degree fine phase shift
+        Group: DCM0 ot DCM1 or DCM2 or DCM3
+        Not external feedback
+      }
+    Step 4: Try to generate required clocks that:
+      { Frequency: 0Hz < frequency <= 400MHz
+        Phase: 90|270 degree
+        Group: NONE
+        Not external feedback
+      }
+    Step 5: Try to generate required clocks that:
+      { Frequency: 0Hz < frequency <= 400MHz
+        Phase: 0|180 degree
+        Group: NONE
+        Not external feedback
+      }
+      There are 1 required clocks are not generated
+      Try to generate 1 of them in this step
+      Required clock: CLKOUT0
+      1. Try to use already instanced DCM's CLKOUTs
+        { Try to use instanced DCM's CLKOUT for CLKOUT0
+          Can not connect CLKGEN's CLKOUT0 to instanced DCM
+        }
+      2. Try to instance a DCM and connect to CLKGEN's CLKIN then use its CLKOUTs
+        { Try to instance DCM and connect its CLKIN to CLKIN
+          Instance DCM0 from CLKGEN's CLKIN
+        }
+        { Try to use instanced DCM's CLKOUT for CLKOUT0
+            try any-group DCM0
+          Connect CLKGEN's CLKOUT0 to DCM0.CLK0
+        }
+    Step 6: Try to generate required clocks that:
+      { Frequency: 0Hz < frequency <= 400MHz
+        Phase: Non 0|90|180|270 degree fine phase shift
+        Group: NONE
+        Not external feedback
+      }
+    Step 7: Try to generate required clocks that:
+      { Frequency: 0Hz < frequency <= 400MHz
+        Phase: 0 degree
+        Group: NONE
+        External feedback
+      }
+    Summary of using DCM only architecture
+      All required clocks are successfully generated

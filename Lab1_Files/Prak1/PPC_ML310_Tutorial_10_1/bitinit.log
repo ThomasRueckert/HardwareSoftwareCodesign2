@@ -1,0 +1,35 @@
+
+bitinit version Xilinx EDK 10.1.03 Build EDK_K_SP3.6
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+WARNING:MDT - Search path C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\Lab1_Task3\
+   directly contains pcores directory. Search path should point to a directory
+   two levels above pcores.
+Overriding IP level properties ...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor ppc405_0
+  (0b0000010000-0b0000010011) ppc405_0	
+  (0b0000100000-0b0000100011) ppc405_0	
+  (0000000000-0x00003fff) ppc405_0_iocm_cntlr	ppc405_0_iocm
+  (0x40a04000-0x40a07fff) ppc405_0_docm_cntlr	ppc405_0_docm
+  (0x81400000-0x8140ffff) LEDs_8Bit	plb0
+  (0x81800000-0x8180ffff) xps_intc_0	plb0
+  (0x83c00000-0x83c0ffff) xps_timer_1	plb0
+  (0x84000000-0x8400ffff) RS232_Uart	plb0
+  (0xffffa000-0xffffbfff) xps_bram_if_cntlr_2	plb0
+  (0xffffc000-0xffffffff) xps_bram_if_cntlr_1	plb0
+
+Initializing Memory...
+Checking ELFs associated with PPC405 instance ppc405_0 for overlap...
+
+
+Analyzing file Blinker/executable.elf...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -bt "implementation/system.bit"  -bd
+"Blinker/executable.elf" tag ppc405_0  -o b implementation/download.bit 
+Memory Initialization completed successfully.
+

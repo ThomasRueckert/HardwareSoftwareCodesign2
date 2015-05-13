@@ -1,0 +1,20 @@
+ppc405_0
+BLINKER_SOURCES = /cygdrive/c/Temp/Prak1/PPC_ML310_Tutorial_10_1/blinker/src/Blinker.c 
+BLINKER_HEADERS = 
+BLINKER_CC = powerpc-eabi-gcc
+BLINKER_CC_SIZE = powerpc-eabi-size
+BLINKER_CC_OPT = -O2
+BLINKER_CFLAGS = 
+BLINKER_CC_SEARCH = # -B
+BLINKER_LIBPATH = -L./ppc405_0/lib/ # -L
+BLINKER_INCLUDES = -I./ppc405_0/include/ # -I
+BLINKER_LFLAGS = # -l
+BLINKER_LINKER_SCRIPT = /cygdrive/c/Temp/Prak1/PPC_ML310_Tutorial_10_1/TestApp_Memory/src/TestApp_Memory_LinkScr.ld
+BLINKER_CC_DEBUG_FLAG =  -g 
+BLINKER_CC_PROFILE_FLAG = # -pg
+BLINKER_CC_GLOBPTR_FLAG= # -msdata=eabi
+BLINKER_CC_INFERRED_FLAGS= 
+BLINKER_CC_START_ADDR_FLAG=  #  # -Wl,-defsym -Wl,_START_ADDR=
+BLINKER_CC_STACK_SIZE_FLAG=  #  # -Wl,-defsym -Wl,_STACK_SIZE=
+BLINKER_CC_HEAP_SIZE_FLAG=  #  # -Wl,-defsym -Wl,_HEAP_SIZE=
+                  $(BLINKER_CC_INFERRED_FLAGS)  \

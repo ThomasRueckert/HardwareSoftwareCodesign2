@@ -1,0 +1,88 @@
+iMPACT Version: Jul 25 2008 04:31:36
+
+iMPACT log file Started on Tue May 13 16:29:09 2014
+
+Preference Table
+Name                 Setting             
+StartupClock         Auto_Correction     
+AutoSignature        False               
+KeepSVF              False               
+ConcurrentMode       False               
+UseHighz             False               
+ConfigOnFailure      Stop                
+UserLevel            Novice              
+MessageLevel         Detailed            
+svfUseTime           false               
+SpiByteSwap          Auto_Correction     
+AutoDetecting cable. Please wait.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 11.3.0.0. WinDriver v11.30 Jungo Connectivity (c) 1997 - 2013 Build Date: May 12 2013 X8632bit SYS 13:43:56, version = 1130.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT2).
+Checking cable driver.
+ Driver windrvr6.sys version = 11.3.0.0. WinDriver v11.30 Jungo Connectivity (c) 1997 - 2013 Build Date: May 12 2013 X8632bit SYS 13:43:56, version = 1130.
+ LPT base address = DCD8h.
+ ECP base address = DC00h.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT3).
+Checking cable driver.
+ Driver windrvr6.sys version = 11.3.0.0. WinDriver v11.30 Jungo Connectivity (c) 1997 - 2013 Build Date: May 12 2013 X8632bit SYS 13:43:56, version = 1130.
+ LPT base address = DCE8h.
+ ECP base address = DCE0h.
+Cable connection established.
+Identifying chain contents ....'1': : Manufacturer's ID =Xilinx xc2vp30, Version : 1
+INFO:iMPACT:1777 - 
+   Reading c:/Programme/Xilinx/10.1/ISE/virtex2p/data/xc2vp30.bsd...
+INFO:iMPACT:501 - '1': Added Device xc2vp30 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+'2': : Manufacturer's ID =Xilinx xccace, Version : 0
+INFO:iMPACT:1777 - 
+   Reading c:/Programme/Xilinx/10.1/ISE/acecf/data/xccace.bsd...
+INFO:iMPACT:501 - '1': Added Device xccace successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+done.
+Elapsed time =      0 sec.
+Elapsed time =      0 sec.
+'2': Loading file 'implementation/download.bit' ...
+done.
+----------------------------------------------------------------------
+INFO:iMPACT:501 - '2': Added Device xc2vp30 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'2': Programming device...
+ Match_cycle = NoWait.
+Match cycle: NoWait
+done.
+'2': Reading status register contents...
+CRC error                                         :         0
+Decryptor security set                            :         0
+DCM locked                                        :         1
+DCI matched                                       :         1
+legacy input error                                :         0
+status of GTS_CFG_B                               :         1
+status of GWE                                     :         1
+status of GHIGH                                   :         1
+value of MODE pin M0                              :         1
+value of MODE pin M1                              :         1
+value of MODE pin M2                              :         1
+value of CFG_RDY (INIT_B)                         :         1
+DONEIN input from DONE pin                        :         1
+IDCODE not validated while trying to write FDRI   :         0
+write FDRI issued before or after decrypt operation:         0
+Decryptor keys not used in proper sequence        :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 0111 1111 1000 0000 0000 0000 0000 
+INFO:iMPACT:579 - '2': Completed downloading bit file to device.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+INFO:iMPACT - '2': Checking done pin....done.
+'2': Programmed successfully.
+Elapsed time =     78 sec.
+----------------------------------------------------------------------
+----------------------------------------------------------------------

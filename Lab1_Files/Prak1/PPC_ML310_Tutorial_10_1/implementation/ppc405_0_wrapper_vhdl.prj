@@ -1,0 +1,7 @@
+vhdl ppc405_v3_00_a "C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v3_00_a\hdl\vhdl\dplb_plbv46_adapter.vhd"
+vhdl ppc405_v3_00_a "C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v3_00_a\hdl\vhdl\iplb_plbv46_adapter.vhd"
+vhdl ppc405_v3_00_a "C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v3_00_a\hdl\vhdl\dplb_replicator.vhd"
+vhdl ppc405_v3_00_a "C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v3_00_a\hdl\vhdl\iplb_replicator.vhd"
+vhdl ppc405_v3_00_a "C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v3_00_a\hdl\vhdl\ppc405_wrap.vhd"
+vhdl ppc405_v3_00_a "C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v3_00_a\hdl\vhdl\ppc405_top.vhd"
+vhdl work "\\afs\tu-chemnitz.de\home\urz\r\rutho\HSC\1\Lab1_Files\Prak1\PPC_ML310_Tutorial_10_1\hdl\ppc405_0_wrapper.vhd"

@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "\\afs\tu-chemnitz.de\home\urz\r\rutho\HSC\1\Lab1_Files\Prak1\PPC_ML310_Tutorial_10_1\Lab1_Task3\MyProcessorIPLib\pcores\blinker_v1_00_a\devl\synthesis\blinker_xst.prj"
+-top blinker
+-p virtex5
+-ofn "\\afs\tu-chemnitz.de\home\urz\r\rutho\HSC\1\Lab1_Files\Prak1\PPC_ML310_Tutorial_10_1\Lab1_Task3\MyProcessorIPLib\pcores\blinker_v1_00_a\devl\synthesis\blinker_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib blinker_v1_00_a

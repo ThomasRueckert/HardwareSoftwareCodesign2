@@ -1,0 +1,296 @@
+Release 10.1.03 - platgen EDK_K_SP3.6 (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+Command Line: platgen -p xc2vp30ff896-6 -lang vhdl -lp Lab1_Task3/ system.mhs 
+
+Parse system.mhs ...
+
+Read MPD definitions ...
+WARNING:MDT - Search path C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\Lab1_Task3\
+   directly contains pcores directory. Search path should point to a directory
+   two levels above pcores.
+Overriding IP level properties ...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor ppc405_0
+  (0b0000010000-0b0000010011) ppc405_0	
+  (0b0000100000-0b0000100011) ppc405_0	
+  (0000000000-0x00003fff) ppc405_0_iocm_cntlr	ppc405_0_iocm
+  (0x40a04000-0x40a07fff) ppc405_0_docm_cntlr	ppc405_0_docm
+  (0x81400000-0x8140ffff) LEDs_8Bit	plb0
+  (0x81800000-0x8180ffff) xps_intc_0	plb0
+  (0x83c00000-0x83c0ffff) xps_timer_1	plb0
+  (0x84000000-0x8400ffff) RS232_Uart	plb0
+  (0xffffa000-0xffffbfff) xps_bram_if_cntlr_2	plb0
+  (0xffffc000-0xffffffff) xps_bram_if_cntlr_1	plb0
+
+Check platform address map ...
+INFO:MDT - IPNAME:ppc405_0 INSTANCE:ppc405 -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v3_00_a\da
+   ta\ppc405_v2_1_0.mpd line 62 - tool is overriding PARAMETER C_DPLB0_P2P value
+   to 0
+INFO:MDT - IPNAME:ppc405_0 INSTANCE:ppc405 -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\ppc405_v3_00_a\da
+   ta\ppc405_v2_1_0.mpd line 64 - tool is overriding PARAMETER C_IPLB0_P2P value
+   to 0
+
+Computing clock values...
+
+Overriding system level properties ...
+INFO:MDT - IPNAME:jtagppc_cntlr_0 INSTANCE:jtagppc_cntlr -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\jtagppc_cntlr_v2_
+   01_c\data\jtagppc_cntlr_v2_1_0.mpd line 36 - tcl is overriding PARAMETER
+   C_NUM_PPC_USED value to 1
+INFO:MDT - IPNAME:plb0 INSTANCE:plb_v46 -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_03_a\d
+   ata\plb_v46_v2_1_0.mpd line 34 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:MDT - IPNAME:plb0 INSTANCE:plb_v46 -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_03_a\d
+   ata\plb_v46_v2_1_0.mpd line 35 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 6
+INFO:MDT - IPNAME:plb0 INSTANCE:plb_v46 -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_03_a\d
+   ata\plb_v46_v2_1_0.mpd line 36 - tool is overriding PARAMETER
+   C_PLBV46_MID_WIDTH value to 1
+INFO:MDT - IPNAME:xps_bram_if_cntlr_1 INSTANCE:xps_bram_if_cntlr -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\xps_bram_if_cntlr
+   _v1_00_a\data\xps_bram_if_cntlr_v2_1_0.mpd line 41 - tool is overriding
+   PARAMETER C_SPLB_DWIDTH value to 64
+INFO:MDT - IPNAME:xps_bram_if_cntlr_1 INSTANCE:xps_bram_if_cntlr -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\xps_bram_if_cntlr
+   _v1_00_a\data\xps_bram_if_cntlr_v2_1_0.mpd line 46 - tool is overriding
+   PARAMETER C_SPLB_SMALLEST_MASTER value to 64
+INFO:MDT - IPNAME:plb_bram_if_cntlr_1_bram INSTANCE:bram_block -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_
+   a\data\bram_block_v2_1_0.mpd line 36 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:MDT - IPNAME:plb_bram_if_cntlr_1_bram INSTANCE:bram_block -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_
+   a\data\bram_block_v2_1_0.mpd line 37 - tool is overriding PARAMETER
+   C_PORT_DWIDTH value to 64
+INFO:MDT - IPNAME:plb_bram_if_cntlr_1_bram INSTANCE:bram_block -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_
+   a\data\bram_block_v2_1_0.mpd line 39 - tool is overriding PARAMETER C_NUM_WE
+   value to 8
+INFO:MDT - IPNAME:RS232_Uart INSTANCE:xps_uartlite -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\xps_uartlite_v1_0
+   0_a\data\xps_uartlite_v2_1_0.mpd line 42 - tool is overriding PARAMETER
+   C_SPLB_DWIDTH value to 64
+INFO:MDT - IPNAME:RS232_Uart INSTANCE:xps_uartlite -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\xps_uartlite_v1_0
+   0_a\data\xps_uartlite_v2_1_0.mpd line 45 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:MDT - IPNAME:LEDs_8Bit INSTANCE:xps_gpio -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v1_00_a\
+   data\xps_gpio_v2_1_0.mpd line 38 - tool is overriding PARAMETER C_SPLB_DWIDTH
+   value to 64
+INFO:MDT - IPNAME:LEDs_8Bit INSTANCE:xps_gpio -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v1_00_a\
+   data\xps_gpio_v2_1_0.mpd line 41 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:MDT - IPNAME:xps_timer_1 INSTANCE:xps_timer -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\xps_timer_v1_00_a
+   \data\xps_timer_v2_1_0.mpd line 44 - tool is overriding PARAMETER
+   C_SPLB_DWIDTH value to 64
+INFO:MDT - IPNAME:xps_timer_1 INSTANCE:xps_timer -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\xps_timer_v1_00_a
+   \data\xps_timer_v2_1_0.mpd line 46 - tool is overriding PARAMETER
+   C_SPLB_MID_WIDTH value to 1
+INFO:MDT - IPNAME:xps_timer_1 INSTANCE:xps_timer -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\xps_timer_v1_00_a
+   \data\xps_timer_v2_1_0.mpd line 47 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:MDT - IPNAME:xps_bram_if_cntlr_2 INSTANCE:xps_bram_if_cntlr -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\xps_bram_if_cntlr
+   _v1_00_a\data\xps_bram_if_cntlr_v2_1_0.mpd line 41 - tool is overriding
+   PARAMETER C_SPLB_DWIDTH value to 64
+INFO:MDT - IPNAME:xps_bram_if_cntlr_2 INSTANCE:xps_bram_if_cntlr -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\xps_bram_if_cntlr
+   _v1_00_a\data\xps_bram_if_cntlr_v2_1_0.mpd line 46 - tool is overriding
+   PARAMETER C_SPLB_SMALLEST_MASTER value to 64
+INFO:MDT - IPNAME:xps_bram_if_cntlr_2_bram INSTANCE:bram_block -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_
+   a\data\bram_block_v2_1_0.mpd line 36 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x2000
+INFO:MDT - IPNAME:ppc405_0_iocm INSTANCE:isocm_v10 -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\isocm_v10_v2_00_b
+   \data\isocm_v10_v2_1_0.mpd line 36 - tcl is overriding PARAMETER C_ISARCVALUE
+   value to 0x00
+INFO:MDT - IPNAME:isocm_bram INSTANCE:bram_block -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_
+   a\data\bram_block_v2_1_0.mpd line 36 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:MDT - IPNAME:isocm_bram INSTANCE:bram_block -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_
+   a\data\bram_block_v2_1_0.mpd line 37 - tool is overriding PARAMETER
+   C_PORT_DWIDTH value to 64
+INFO:MDT - IPNAME:isocm_bram INSTANCE:bram_block -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_
+   a\data\bram_block_v2_1_0.mpd line 39 - tool is overriding PARAMETER C_NUM_WE
+   value to 2
+INFO:MDT - IPNAME:ppc405_0_docm INSTANCE:dsocm_v10 -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\dsocm_v10_v2_00_b
+   \data\dsocm_v10_v2_1_0.mpd line 36 - tcl is overriding PARAMETER C_DSARCVALUE
+   value to 0x40
+INFO:MDT - IPNAME:dsocm_bram INSTANCE:bram_block -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_
+   a\data\bram_block_v2_1_0.mpd line 36 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:MDT - IPNAME:xps_intc_0 INSTANCE:xps_intc -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\xps_intc_v1_00_a\
+   data\xps_intc_v2_1_0.mpd line 42 - tool is overriding PARAMETER C_SPLB_DWIDTH
+   value to 64
+INFO:MDT - IPNAME:xps_intc_0 INSTANCE:xps_intc -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\xps_intc_v1_00_a\
+   data\xps_intc_v2_1_0.mpd line 44 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:MDT - IPNAME:xps_intc_0 INSTANCE:xps_intc -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\xps_intc_v1_00_a\
+   data\xps_intc_v2_1_0.mpd line 49 - tcl is overriding PARAMETER C_KIND_OF_INTR
+   value to 0b00000000000000000000000000000010
+INFO:MDT - IPNAME:xps_intc_0 INSTANCE:xps_intc -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\xps_intc_v1_00_a\
+   data\xps_intc_v2_1_0.mpd line 50 - tcl is overriding PARAMETER C_KIND_OF_EDGE
+   value to 0b00000000000000000000000000000010
+INFO:MDT - IPNAME:xps_intc_0 INSTANCE:xps_intc -
+   C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\xps_intc_v1_00_a\
+   data\xps_intc_v2_1_0.mpd line 51 - tcl is overriding PARAMETER C_KIND_OF_LVL
+   value to 0b00000000000000000000000000000001
+
+Running system level Update ...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+
+Performing System level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+
+Check platform configuration ...
+IPNAME:plb_v46 INSTANCE:plb0 - C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\system.mhs
+line 53 - 2 master(s) : 6 slave(s)
+IPNAME:isocm_v10 INSTANCE:ppc405_0_iocm -
+C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\system.mhs line 134 - 1 master(s) : 1
+slave(s)
+IPNAME:dsocm_v10 INSTANCE:ppc405_0_docm -
+C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\system.mhs line 159 - 1 master(s) : 1
+slave(s)
+
+Check port drivers...
+WARNING:MDT - PORT:Peripheral_Reset CONNECTOR:sys_periph_reset -
+   C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\system.mhs line 215 - floating
+   connection!
+
+Performing Clock DRCs...
+
+
+Running UPDATE Tcl procedures for OPTION PLATGEN_SYSLEVEL_UPDATE_PROC...
+
+Modify defaults ...
+
+Creating stub ...
+
+Processing licensed instances ...
+Completion time: 0.00 seconds
+
+Creating hardware output directories ...
+
+Managing hardware (BBD-specified) netlist files ...
+
+Managing cache ...
+IPNAME:ppc405 INSTANCE:ppc405_0 -
+C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\system.mhs line 31 - Copying cache
+implementation netlist
+IPNAME:jtagppc_cntlr INSTANCE:jtagppc_cntlr_0 -
+C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\system.mhs line 47 - Copying cache
+implementation netlist
+IPNAME:plb_v46 INSTANCE:plb0 - C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\system.mhs
+line 53 - Copying cache implementation netlist
+IPNAME:xps_bram_if_cntlr INSTANCE:xps_bram_if_cntlr_1 -
+C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\system.mhs line 62 - Copying cache
+implementation netlist
+IPNAME:bram_block INSTANCE:plb_bram_if_cntlr_1_bram -
+C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\system.mhs line 72 - Copying cache
+implementation netlist
+IPNAME:xps_uartlite INSTANCE:rs232_uart -
+C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\system.mhs line 78 - Copying cache
+implementation netlist
+IPNAME:xps_gpio INSTANCE:leds_8bit -
+C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\system.mhs line 94 - Copying cache
+implementation netlist
+IPNAME:xps_timer INSTANCE:xps_timer_1 -
+C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\system.mhs line 107 - Copying cache
+implementation netlist
+IPNAME:xps_bram_if_cntlr INSTANCE:xps_bram_if_cntlr_2 -
+C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\system.mhs line 118 - Copying cache
+implementation netlist
+IPNAME:bram_block INSTANCE:xps_bram_if_cntlr_2_bram -
+C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\system.mhs line 128 - Copying cache
+implementation netlist
+IPNAME:isocm_v10 INSTANCE:ppc405_0_iocm -
+C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\system.mhs line 134 - Copying cache
+implementation netlist
+IPNAME:isbram_if_cntlr INSTANCE:ppc405_0_iocm_cntlr -
+C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\system.mhs line 142 - Copying cache
+implementation netlist
+IPNAME:bram_block INSTANCE:isocm_bram -
+C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\system.mhs line 152 - Copying cache
+implementation netlist
+IPNAME:dsocm_v10 INSTANCE:ppc405_0_docm -
+C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\system.mhs line 159 - Copying cache
+implementation netlist
+IPNAME:dsbram_if_cntlr INSTANCE:ppc405_0_docm_cntlr -
+C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\system.mhs line 167 - Copying cache
+implementation netlist
+IPNAME:bram_block INSTANCE:dsocm_bram -
+C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\system.mhs line 176 - Copying cache
+implementation netlist
+IPNAME:util_reduced_logic INSTANCE:orgate_1 -
+C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\system.mhs line 182 - Copying cache
+implementation netlist
+IPNAME:clock_generator INSTANCE:clock_generator_0 -
+C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\system.mhs line 191 - Copying cache
+implementation netlist
+IPNAME:proc_sys_reset INSTANCE:proc_sys_reset_0 -
+C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\system.mhs line 206 - Copying cache
+implementation netlist
+IPNAME:xps_intc INSTANCE:xps_intc_0 -
+C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\system.mhs line 218 - Copying cache
+implementation netlist
+
+Elaborating instances ...
+IPNAME:bram_block INSTANCE:plb_bram_if_cntlr_1_bram -
+C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\system.mhs line 72 - elaborating IP
+IPNAME:bram_block INSTANCE:xps_bram_if_cntlr_2_bram -
+C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\system.mhs line 128 - elaborating IP
+IPNAME:bram_block INSTANCE:isocm_bram -
+C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\system.mhs line 152 - elaborating IP
+IPNAME:bram_block INSTANCE:dsocm_bram -
+C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\system.mhs line 176 - elaborating IP
+
+Writing HDL for elaborated instances ...
+
+Inserting wrapper level ...
+Completion time: 0.00 seconds
+
+Constructing platform-level connectivity ...
+Completion time: 1.00 seconds
+
+Writing (top-level) BMM ...
+
+Writing (top-level and wrappers) HDL ...
+
+Generating synthesis project file ...
+
+Running XST synthesis ...
+INFO:MDT - The following instances are synthesized with XST. The MPD option
+   IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
+   synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized.
+
+Running NGCBUILD ...
+
+Rebuilding cache ...
+
+Total run time: 2.00 seconds

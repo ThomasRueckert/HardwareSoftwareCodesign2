@@ -1,0 +1,1 @@
+ -p virtex2p -lang vhdl -lp H:/HSC/1/Lab1_Files/Prak1/PPC_ML310_Tutorial_10_1/Lab1_Task3/   TestApp_Memory/executable.elf -s mti -X C:/Temp/Prak1/PPC_ML310_Tutorial_10_1/Lab1_Task3/ -E C:/Temp/Prak1/PPC_ML310_Tutorial_10_1/Lab1_Task3/

@@ -1,0 +1,28 @@
+// File: C:\Temp\Prak1\PPC_ML310_Tutorial_10_1\Lab1_Task3\implementation\system.bmm
+
+ADDRESS_MAP ppc405_0 PPC405 100
+	ADDRESS_SPACE xps_bram_if_cntlr_2_bram_combined COMBINED [0x00000000:0x00001fff]
+		ADDRESS_RANGE RAMB16
+		BUS_BLOCK
+			xps_bram_if_cntlr_2_bram/xps_bram_if_cntlr_2_bram/ramb16_s9_s9_0 [31:24] ;
+			xps_bram_if_cntlr_2_bram/xps_bram_if_cntlr_2_bram/ramb16_s9_s9_1 [23:16] ;
+			xps_bram_if_cntlr_2_bram/xps_bram_if_cntlr_2_bram/ramb16_s9_s9_2 [15:8] ;
+			xps_bram_if_cntlr_2_bram/xps_bram_if_cntlr_2_bram/ramb16_s9_s9_3 [7:0] ;
+		END_BUS_BLOCK;
+		END_ADDRESS_RANGE;
+	END_ADDRESS_SPACE;
+	ADDRESS_SPACE plb_bram_if_cntlr_1_bram_combined COMBINED [0xffffc000:0xffffffff]
+		ADDRESS_RANGE RAMB16
+		BUS_BLOCK
+			plb_bram_if_cntlr_1_bram/plb_bram_if_cntlr_1_bram/ramb16_s9_s9_0 [63:56] ;
+			plb_bram_if_cntlr_1_bram/plb_bram_if_cntlr_1_bram/ramb16_s9_s9_1 [55:48] ;
+			plb_bram_if_cntlr_1_bram/plb_bram_if_cntlr_1_bram/ramb16_s9_s9_2 [47:40] ;
+			plb_bram_if_cntlr_1_bram/plb_bram_if_cntlr_1_bram/ramb16_s9_s9_3 [39:32] ;
+			plb_bram_if_cntlr_1_bram/plb_bram_if_cntlr_1_bram/ramb16_s9_s9_4 [31:24] ;
+			plb_bram_if_cntlr_1_bram/plb_bram_if_cntlr_1_bram/ramb16_s9_s9_5 [23:16] ;
+			plb_bram_if_cntlr_1_bram/plb_bram_if_cntlr_1_bram/ramb16_s9_s9_6 [15:8] ;
+			plb_bram_if_cntlr_1_bram/plb_bram_if_cntlr_1_bram/ramb16_s9_s9_7 [7:0] ;
+		END_BUS_BLOCK;
+		END_ADDRESS_RANGE;
+	END_ADDRESS_SPACE;
+END_ADDRESS_MAP;

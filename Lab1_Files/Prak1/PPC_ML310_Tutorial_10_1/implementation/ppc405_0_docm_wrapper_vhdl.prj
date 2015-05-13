@@ -1,0 +1,3 @@
+vhdl dsocm_v10_v2_00_b "C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\dsocm_v10_v2_00_b\hdl\vhdl\and_or_mux.vhd"
+vhdl dsocm_v10_v2_00_b "C:\Programme\Xilinx\10.1\EDK\hw\XilinxProcessorIPLib\pcores\dsocm_v10_v2_00_b\hdl\vhdl\dsocm_v10.vhd"
+vhdl work "\\afs\tu-chemnitz.de\home\urz\r\rutho\HSC\1\Lab1_Files\Prak1\PPC_ML310_Tutorial_10_1\hdl\ppc405_0_docm_wrapper.vhd"

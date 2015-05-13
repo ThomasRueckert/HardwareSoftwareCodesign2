@@ -1,0 +1,44 @@
+
+bitinit version Xilinx EDK 10.1.03 Build EDK_K_SP3.6
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+WARNING:MDT - Search path
+   \\afs\tu-chemnitz.de\home\urz\r\rutho\HSC\1\Lab1_Files\Prak1\PPC_ML310_Tutori
+   al_10_1\Lab1_Task3\ directly contains pcores directory. Search path should
+   point to a directory two levels above pcores.WARNING:MDT - Option "CORE_STATE" in
+   H:\HSC\1\Lab1_Files\Prak1\PPC_ML310_Tutorial_10_1\Lab1_Task3\MyProcessorIPLib
+   \pcores\blinker_v1_00_a\data\blinker_v2_1_0.mpd line 87  is deprecated.
+   Please use Option ARCH_SUPPORT_MAP instead. 
+
+Overriding IP level properties ...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor ppc405_0
+  (0b0000010000-0b0000010011) ppc405_0	
+  (0b0000100000-0b0000100011) ppc405_0	
+  (0000000000-0x00001fff) xps_bram_if_cntlr_2	plb0
+  (0x84000000-0x8400ffff) RS232_Uart	plb0
+  (0xffffc000-0xffffffff) xps_bram_if_cntlr_1	plb0
+
+
+WARNING:MDT - Peripheral blinker_0 is not connected to any of the processors in
+   the system. Check for the following reasons.
+   1. blinker_0 is not connected to any of the buses connected to a processor. 
+   2. blinker_0 does not have adresses set correctly. 
+   3. blinker_0's address is not within any of the bridge windows connected to a
+   processor.
+
+
+Initializing Memory...
+Checking ELFs associated with PPC405 instance ppc405_0 for overlap...
+
+
+Analyzing file TestApp_Memory/executable.elf...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -bt "implementation/system.bit"  -bd
+"TestApp_Memory/executable.elf" tag ppc405_0  -o b implementation/download.bit 
+Memory Initialization completed successfully.
+

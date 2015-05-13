@@ -1,0 +1,10 @@
+-batch 
+-create blinker 
+-ver 1.00.a 
+-dir "H:\HSC\1\Lab1_Files\Prak1\PPC_ML310_Tutorial_10_1\Lab1_Task3\MyProcessorIPLib" 
+-lang vhdl 
+-bus plbv46 s 
+-reg 1 
+-xps 
+-ise 
+-driver 

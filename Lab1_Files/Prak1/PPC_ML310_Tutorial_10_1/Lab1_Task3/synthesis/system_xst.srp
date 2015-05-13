@@ -1,0 +1,472 @@
+Release 10.1.03 - xst K.39 (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> PMSPEC -- Overriding Xilinx file <C:/Programme/Xilinx/10.1/EDK/virtex2p/data/virtex2p.acd> with local file <c:/Programme/Xilinx/10.1/ISE/virtex2p/data/virtex2p.acd>
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "system_xst.prj"
+
+---- Target Parameters
+Target Device                      : xc2vp30ff896-6
+Output File Name                   : "../implementation/system.ngc"
+
+---- Source Options
+Top Module Name                    : system
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 10000
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Temp/Prak1/PPC_ML310_Tutorial_10_1/Lab1_Task3/hdl/system.vhd" in Library work.
+Entity <system> compiled.
+Entity <system> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <system> in library <work> (architecture <STRUCTURE>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <system> in library <work> (Architecture <STRUCTURE>).
+Entity <system> analyzed. Unit <system> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <system>.
+    Related source file is "C:/Temp/Prak1/PPC_ML310_Tutorial_10_1/Lab1_Task3/hdl/system.vhd".
+WARNING:Xst:646 - Signal <pgassign1<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <system> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <../implementation/ppc405_0_wrapper.ngc>.
+Reading core <../implementation/jtagppc_cntlr_0_wrapper.ngc>.
+Reading core <../implementation/plb0_wrapper.ngc>.
+Reading core <../implementation/xps_bram_if_cntlr_1_wrapper.ngc>.
+Reading core <../implementation/plb_bram_if_cntlr_1_bram_wrapper.ngc>.
+Reading core <../implementation/rs232_uart_wrapper.ngc>.
+Reading core <../implementation/xps_bram_if_cntlr_2_wrapper.ngc>.
+Reading core <../implementation/xps_bram_if_cntlr_2_bram_wrapper.ngc>.
+Reading core <../implementation/orgate_1_wrapper.ngc>.
+Reading core <../implementation/clock_generator_0_wrapper.ngc>.
+Reading core <../implementation/proc_sys_reset_0_wrapper.ngc>.
+Reading core <../implementation/blinker_0_wrapper.ngc>.
+Loading core <ppc405_0_wrapper> for timing and area information for instance <ppc405_0>.
+Loading core <jtagppc_cntlr_0_wrapper> for timing and area information for instance <jtagppc_cntlr_0>.
+Loading core <plb0_wrapper> for timing and area information for instance <plb0>.
+Loading core <xps_bram_if_cntlr_1_wrapper> for timing and area information for instance <xps_bram_if_cntlr_1>.
+Loading core <plb_bram_if_cntlr_1_bram_wrapper> for timing and area information for instance <plb_bram_if_cntlr_1_bram>.
+Loading core <rs232_uart_wrapper> for timing and area information for instance <RS232_Uart>.
+Loading core <xps_bram_if_cntlr_2_wrapper> for timing and area information for instance <xps_bram_if_cntlr_2>.
+Loading core <xps_bram_if_cntlr_2_bram_wrapper> for timing and area information for instance <xps_bram_if_cntlr_2_bram>.
+Loading core <orgate_1_wrapper> for timing and area information for instance <ORGate_1>.
+Loading core <clock_generator_0_wrapper> for timing and area information for instance <clock_generator_0>.
+Loading core <proc_sys_reset_0_wrapper> for timing and area information for instance <proc_sys_reset_0>.
+Loading core <blinker_0_wrapper> for timing and area information for instance <blinker_0>.
+Loading device for application Rf_Device from file '2vp30.nph' in environment c:\Programme\Xilinx\10.1\ISE;C:\Programme\Xilinx\10.1\EDK.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <system> ...
+
+Mapping all equations...
+WARNING:Xst:1513 - No elements found for TNM 'FFS : ppc405_0_WRAPPER' on object 'ppc405_0/ppc405_0/PPC405_i/PPC405_i'.
+Building and optimizing final netlist ...
+INFO:Xst:2260 - The FF/Latch <plb0/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1> in Unit <plb0> is equivalent to the following 2 FFs/Latches : <plb0/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1_1> <plb0/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1_2> 
+INFO:Xst:2260 - The FF/Latch <plb0/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbSecWrInProgReg_i> in Unit <plb0> is equivalent to the following FF/Latch : <plb0/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbSecWrInProgReg_i_1> 
+INFO:Xst:2260 - The FF/Latch <plb0/GEN_MPLB_RST[1].I_MPLB_RST> in Unit <plb0> is equivalent to the following 5 FFs/Latches : <plb0/GEN_MPLB_RST[0].I_MPLB_RST> <plb0/GEN_SPLB_RST[2].I_SPLB_RST> <plb0/GEN_SPLB_RST[1].I_SPLB_RST> <plb0/GEN_SPLB_RST[0].I_SPLB_RST> <plb0/I_PLB_RST> 
+INFO:Xst:2260 - The FF/Latch <plb0/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0> in Unit <plb0> is equivalent to the following 2 FFs/Latches : <plb0/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0_1> <plb0/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0_2> 
+INFO:Xst:2260 - The FF/Latch <xps_bram_if_cntlr_1/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_SET_SLBUSY> in Unit <xps_bram_if_cntlr_1> is equivalent to the following FF/Latch : <xps_bram_if_cntlr_1/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_ADDRACK> 
+INFO:Xst:2260 - The FF/Latch <xps_bram_if_cntlr_1/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_WRACK> in Unit <xps_bram_if_cntlr_1> is equivalent to the following FF/Latch : <xps_bram_if_cntlr_1/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_WRACK_2BUS> 
+INFO:Xst:2260 - The FF/Latch <xps_bram_if_cntlr_2/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_SET_SLBUSY> in Unit <xps_bram_if_cntlr_2> is equivalent to the following FF/Latch : <xps_bram_if_cntlr_2/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_ADDRACK> 
+INFO:Xst:2260 - The FF/Latch <xps_bram_if_cntlr_2/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_WRACK> in Unit <xps_bram_if_cntlr_2> is equivalent to the following FF/Latch : <xps_bram_if_cntlr_2/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_WRACK_2BUS> 
+INFO:Xst:2260 - The FF/Latch <plb0/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1> in Unit <plb0> is equivalent to the following 2 FFs/Latches : <plb0/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1_1> <plb0/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1_2> 
+INFO:Xst:2260 - The FF/Latch <plb0/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbSecWrInProgReg_i> in Unit <plb0> is equivalent to the following FF/Latch : <plb0/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbSecWrInProgReg_i_1> 
+INFO:Xst:2260 - The FF/Latch <plb0/GEN_MPLB_RST[1].I_MPLB_RST> in Unit <plb0> is equivalent to the following 5 FFs/Latches : <plb0/GEN_MPLB_RST[0].I_MPLB_RST> <plb0/GEN_SPLB_RST[2].I_SPLB_RST> <plb0/GEN_SPLB_RST[1].I_SPLB_RST> <plb0/GEN_SPLB_RST[0].I_SPLB_RST> <plb0/I_PLB_RST> 
+INFO:Xst:2260 - The FF/Latch <plb0/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0> in Unit <plb0> is equivalent to the following 2 FFs/Latches : <plb0/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0_1> <plb0/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0_2> 
+INFO:Xst:2260 - The FF/Latch <xps_bram_if_cntlr_1/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_SET_SLBUSY> in Unit <xps_bram_if_cntlr_1> is equivalent to the following FF/Latch : <xps_bram_if_cntlr_1/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_ADDRACK> 
+INFO:Xst:2260 - The FF/Latch <xps_bram_if_cntlr_1/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_WRACK> in Unit <xps_bram_if_cntlr_1> is equivalent to the following FF/Latch : <xps_bram_if_cntlr_1/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_WRACK_2BUS> 
+INFO:Xst:2260 - The FF/Latch <xps_bram_if_cntlr_2/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_SET_SLBUSY> in Unit <xps_bram_if_cntlr_2> is equivalent to the following FF/Latch : <xps_bram_if_cntlr_2/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_ADDRACK> 
+INFO:Xst:2260 - The FF/Latch <xps_bram_if_cntlr_2/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_WRACK> in Unit <xps_bram_if_cntlr_2> is equivalent to the following FF/Latch : <xps_bram_if_cntlr_2/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_WRACK_2BUS> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/system.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 8
+
+Cell Usage :
+# BELS                             : 1671
+#      BUF                         : 64
+#      GND                         : 12
+#      INV                         : 45
+#      LUT1                        : 73
+#      LUT2                        : 153
+#      LUT2_D                      : 8
+#      LUT2_L                      : 8
+#      LUT3                        : 388
+#      LUT3_D                      : 6
+#      LUT3_L                      : 12
+#      LUT4                        : 517
+#      LUT4_D                      : 15
+#      LUT4_L                      : 19
+#      MUXCY                       : 176
+#      MUXCY_L                     : 22
+#      MUXF5                       : 27
+#      VCC                         : 9
+#      XORCY                       : 117
+# FlipFlops/Latches                : 1157
+#      FD                          : 156
+#      FDC                         : 27
+#      FDE                         : 47
+#      FDP                         : 4
+#      FDR                         : 431
+#      FDRE                        : 400
+#      FDRS                        : 12
+#      FDRSE                       : 9
+#      FDS                         : 54
+#      FDSE                        : 17
+# RAMS                             : 12
+#      RAMB16_S9_S9                : 12
+# Shift Registers                  : 24
+#      SRL16                       : 5
+#      SRL16E                      : 19
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+# IO Buffers                       : 8
+#      IBUF                        : 2
+#      IBUFG                       : 1
+#      OBUF                        : 5
+# DCMs                             : 1
+#      DCM                         : 1
+# Others                           : 4
+#      JTAGPPC                     : 1
+#      PPC405                      : 2
+#      TIMEGRP                     : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2vp30ff896-6 
+
+ Number of Slices:                      940  out of  13696     6%  
+ Number of Slice Flip Flops:           1157  out of  27392     4%  
+ Number of 4 input LUTs:               1268  out of  27392     4%  
+    Number used as logic:              1244
+    Number used as Shift registers:      24
+ Number of IOs:                           8
+ Number of bonded IOBs:                   8  out of    556     1%  
+ Number of BRAMs:                        12  out of    136     8%  
+ Number of GCLKs:                         1  out of     16     6%  
+ Number of PPC405s:                       2  out of      2   100%  
+ Number of DCMs:                          1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+---------------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                                     | Load  |
+-----------------------------------+---------------------------------------------------------------------------+-------+
+sys_clk_pin                        | clock_generator_0/Using_DCM0.DCM0_INST/DCM_INST/Using_Virtex.DCM_INST:CLK0| 1033  |
+N0                                 | NONE(blinker_0/blinker_0/USER_LOGIC_I/slv_reg0_8)                         | 148   |
+-----------------------------------+---------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------+-------+
+Control Signal                                                                                               | Buffer(FF name)                                                              | Load  |
+-------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------+-------+
+blinker_0/blinker_0/USER_LOGIC_I/u_user_reset_inv(blinker_0/blinker_0/USER_LOGIC_I/u_user_reset_inv1_INV_0:O)| NONE(blinker_0/blinker_0/USER_LOGIC_I/count_9)                               | 27    |
+N0(XST_GND:G)                                                                                                | NONE(clock_generator_0/clock_generator_0/Using_DCM0.DCM0_INST/DCM_INST/rsti2)| 4     |
+-------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -6
+
+   Minimum period: 6.259ns (Maximum Frequency: 159.782MHz)
+   Minimum input arrival time before clock: 2.323ns
+   Maximum output required time after clock: 5.813ns
+   Maximum combinational path delay: 5.160ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'sys_clk_pin'
+  Clock period: 6.259ns (frequency: 159.782MHz)
+  Total number of paths / destination ports: 21712 / 2104
+-------------------------------------------------------------------------
+Delay:               6.259ns (Levels of Logic = 41)
+  Source:            blinker_0/blinker_0/USER_LOGIC_I/count_0 (FF)
+  Destination:       blinker_0/blinker_0/USER_LOGIC_I/count_26 (FF)
+  Source Clock:      sys_clk_pin rising
+  Destination Clock: sys_clk_pin rising
+
+  Data Path: blinker_0/blinker_0/USER_LOGIC_I/count_0 to blinker_0/blinker_0/USER_LOGIC_I/count_26
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.374   0.588  blinker_0/USER_LOGIC_I/count_0 (blinker_0/USER_LOGIC_I/count<0>)
+     LUT4:I0->O            1   0.313   0.000  blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_lut<0> (blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_lut<0>)
+     MUXCY:S->O            1   0.377   0.000  blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<0> (blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<0>)
+     MUXCY:CI->O           1   0.042   0.000  blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<1> (blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<1>)
+     MUXCY:CI->O           1   0.042   0.000  blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<2> (blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<2>)
+     MUXCY:CI->O           1   0.042   0.000  blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<3> (blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<3>)
+     MUXCY:CI->O           1   0.042   0.000  blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<4> (blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<4>)
+     MUXCY:CI->O           1   0.042   0.000  blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<5> (blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<5>)
+     MUXCY:CI->O           1   0.042   0.000  blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<6> (blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<6>)
+     MUXCY:CI->O           1   0.042   0.000  blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<7> (blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<7>)
+     MUXCY:CI->O           1   0.042   0.000  blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<8> (blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<8>)
+     MUXCY:CI->O           1   0.042   0.000  blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<9> (blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<9>)
+     MUXCY:CI->O           1   0.042   0.000  blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<10> (blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<10>)
+     MUXCY:CI->O          28   0.525   0.783  blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<11> (blinker_0/USER_LOGIC_I/count_cmp_ge0000)
+     INV:I->O              1   0.313   0.390  blinker_0/USER_LOGIC_I/count_cmp_ge0000_inv1_INV_0 (blinker_0/USER_LOGIC_I/count_cmp_ge0000_inv)
+     MUXCY:CI->O           1   0.042   0.000  blinker_0/USER_LOGIC_I/Mcount_count_cy<0> (blinker_0/USER_LOGIC_I/Mcount_count_cy<0>)
+     MUXCY:CI->O           1   0.042   0.000  blinker_0/USER_LOGIC_I/Mcount_count_cy<1> (blinker_0/USER_LOGIC_I/Mcount_count_cy<1>)
+     MUXCY:CI->O           1   0.042   0.000  blinker_0/USER_LOGIC_I/Mcount_count_cy<2> (blinker_0/USER_LOGIC_I/Mcount_count_cy<2>)
+     MUXCY:CI->O           1   0.042   0.000  blinker_0/USER_LOGIC_I/Mcount_count_cy<3> (blinker_0/USER_LOGIC_I/Mcount_count_cy<3>)
+     MUXCY:CI->O           1   0.041   0.000  blinker_0/USER_LOGIC_I/Mcount_count_cy<4> (blinker_0/USER_LOGIC_I/Mcount_count_cy<4>)
+     MUXCY:CI->O           1   0.041   0.000  blinker_0/USER_LOGIC_I/Mcount_count_cy<5> (blinker_0/USER_LOGIC_I/Mcount_count_cy<5>)
+     MUXCY:CI->O           1   0.041   0.000  blinker_0/USER_LOGIC_I/Mcount_count_cy<6> (blinker_0/USER_LOGIC_I/Mcount_count_cy<6>)
+     MUXCY:CI->O           1   0.041   0.000  blinker_0/USER_LOGIC_I/Mcount_count_cy<7> (blinker_0/USER_LOGIC_I/Mcount_count_cy<7>)
+     MUXCY:CI->O           1   0.041   0.000  blinker_0/USER_LOGIC_I/Mcount_count_cy<8> (blinker_0/USER_LOGIC_I/Mcount_count_cy<8>)
+     MUXCY:CI->O           1   0.041   0.000  blinker_0/USER_LOGIC_I/Mcount_count_cy<9> (blinker_0/USER_LOGIC_I/Mcount_count_cy<9>)
+     MUXCY:CI->O           1   0.041   0.000  blinker_0/USER_LOGIC_I/Mcount_count_cy<10> (blinker_0/USER_LOGIC_I/Mcount_count_cy<10>)
+     MUXCY:CI->O           1   0.041   0.000  blinker_0/USER_LOGIC_I/Mcount_count_cy<11> (blinker_0/USER_LOGIC_I/Mcount_count_cy<11>)
+     MUXCY:CI->O           1   0.041   0.000  blinker_0/USER_LOGIC_I/Mcount_count_cy<12> (blinker_0/USER_LOGIC_I/Mcount_count_cy<12>)
+     MUXCY:CI->O           1   0.041   0.000  blinker_0/USER_LOGIC_I/Mcount_count_cy<13> (blinker_0/USER_LOGIC_I/Mcount_count_cy<13>)
+     MUXCY:CI->O           1   0.041   0.000  blinker_0/USER_LOGIC_I/Mcount_count_cy<14> (blinker_0/USER_LOGIC_I/Mcount_count_cy<14>)
+     MUXCY:CI->O           1   0.041   0.000  blinker_0/USER_LOGIC_I/Mcount_count_cy<15> (blinker_0/USER_LOGIC_I/Mcount_count_cy<15>)
+     MUXCY:CI->O           1   0.041   0.000  blinker_0/USER_LOGIC_I/Mcount_count_cy<16> (blinker_0/USER_LOGIC_I/Mcount_count_cy<16>)
+     MUXCY:CI->O           1   0.041   0.000  blinker_0/USER_LOGIC_I/Mcount_count_cy<17> (blinker_0/USER_LOGIC_I/Mcount_count_cy<17>)
+     MUXCY:CI->O           1   0.041   0.000  blinker_0/USER_LOGIC_I/Mcount_count_cy<18> (blinker_0/USER_LOGIC_I/Mcount_count_cy<18>)
+     MUXCY:CI->O           1   0.041   0.000  blinker_0/USER_LOGIC_I/Mcount_count_cy<19> (blinker_0/USER_LOGIC_I/Mcount_count_cy<19>)
+     MUXCY:CI->O           1   0.041   0.000  blinker_0/USER_LOGIC_I/Mcount_count_cy<20> (blinker_0/USER_LOGIC_I/Mcount_count_cy<20>)
+     MUXCY:CI->O           1   0.041   0.000  blinker_0/USER_LOGIC_I/Mcount_count_cy<21> (blinker_0/USER_LOGIC_I/Mcount_count_cy<21>)
+     MUXCY:CI->O           1   0.041   0.000  blinker_0/USER_LOGIC_I/Mcount_count_cy<22> (blinker_0/USER_LOGIC_I/Mcount_count_cy<22>)
+     MUXCY:CI->O           1   0.041   0.000  blinker_0/USER_LOGIC_I/Mcount_count_cy<23> (blinker_0/USER_LOGIC_I/Mcount_count_cy<23>)
+     MUXCY:CI->O           1   0.041   0.000  blinker_0/USER_LOGIC_I/Mcount_count_cy<24> (blinker_0/USER_LOGIC_I/Mcount_count_cy<24>)
+     MUXCY:CI->O           0   0.041   0.000  blinker_0/USER_LOGIC_I/Mcount_count_cy<25> (blinker_0/USER_LOGIC_I/Mcount_count_cy<25>)
+     XORCY:CI->O           1   0.868   0.000  blinker_0/USER_LOGIC_I/Mcount_count_xor<26> (blinker_0/USER_LOGIC_I/Mcount_count26)
+     FDC:D                     0.234          blinker_0/USER_LOGIC_I/count_26
+    ----------------------------------------
+    Total                      6.259ns (4.498ns logic, 1.761ns route)
+                                       (71.9% logic, 28.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'N0'
+  Clock period: 3.664ns (frequency: 272.926MHz)
+  Total number of paths / destination ports: 470 / 204
+-------------------------------------------------------------------------
+Delay:               3.664ns (Levels of Logic = 4)
+  Source:            blinker_0/blinker_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_size_reg_1 (FF)
+  Destination:       blinker_0/blinker_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_i (FF)
+  Source Clock:      N0 rising
+  Destination Clock: N0 rising
+
+  Data Path: blinker_0/blinker_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_size_reg_1 to blinker_0/blinker_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_i
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.374   0.533  blinker_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_size_reg_1 (blinker_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_size_reg<1>)
+     LUT2:I0->O            1   0.313   0.440  blinker_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_ns111 (blinker_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_ns111)
+     LUT4_D:I3->LO         1   0.313   0.243  blinker_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_ns116 (N10)
+     LUT2:I0->O            2   0.313   0.588  blinker_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_ns132 (blinker_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/N5)
+     LUT4:I0->O            1   0.313   0.000  blinker_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_ns2 (blinker_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_ns)
+     FDR:D                     0.234          blinker_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_i
+    ----------------------------------------
+    Total                      3.664ns (1.860ns logic, 1.804ns route)
+                                       (50.8% logic, 49.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'sys_clk_pin'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              2.323ns (Levels of Logic = 3)
+  Source:            sys_rst_pin (PAD)
+  Destination:       proc_sys_reset_0/proc_sys_reset_0/EXT_LPF/exr_d1 (FF)
+  Destination Clock: sys_clk_pin rising
+
+  Data Path: sys_rst_pin to proc_sys_reset_0/proc_sys_reset_0/EXT_LPF/exr_d1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.919   0.467  sys_rst_pin_IBUF (sys_rst_pin_IBUF)
+     begin scope: 'proc_sys_reset_0'
+     INV:I->O              1   0.313   0.390  proc_sys_reset_0/EXT_LPF/exr_d1_or000011_INV_0 (proc_sys_reset_0/EXT_LPF/exr_d1_or00001)
+     FDS:D                     0.234          proc_sys_reset_0/EXT_LPF/exr_d1
+    ----------------------------------------
+    Total                      2.323ns (1.466ns logic, 0.857ns route)
+                                       (63.1% logic, 36.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'sys_clk_pin'
+  Total number of paths / destination ports: 21 / 2
+-------------------------------------------------------------------------
+Offset:              5.813ns (Levels of Logic = 14)
+  Source:            blinker_0/blinker_0/USER_LOGIC_I/count_7 (FF)
+  Destination:       led_pin (PAD)
+  Source Clock:      sys_clk_pin rising
+
+  Data Path: blinker_0/blinker_0/USER_LOGIC_I/count_7 to led_pin
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.374   0.610  blinker_0/USER_LOGIC_I/count_7 (blinker_0/USER_LOGIC_I/count<7>)
+     LUT1:I0->O            1   0.313   0.000  blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<0>_0_rt (blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<0>_0_rt)
+     MUXCY:S->O            1   0.377   0.000  blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<0>_0 (blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<0>1)
+     MUXCY:CI->O           1   0.042   0.000  blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<1>_0 (blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<1>1)
+     MUXCY:CI->O           1   0.042   0.000  blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<2>_0 (blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<2>1)
+     MUXCY:CI->O           1   0.042   0.000  blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<3>_0 (blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<3>1)
+     MUXCY:CI->O           1   0.042   0.000  blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<4>_0 (blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<4>1)
+     MUXCY:CI->O           1   0.042   0.000  blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<5>_0 (blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<5>1)
+     MUXCY:CI->O           1   0.042   0.000  blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<6>_0 (blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<6>1)
+     MUXCY:CI->O           1   0.042   0.000  blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<7>_0 (blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<7>1)
+     MUXCY:CI->O           1   0.042   0.000  blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<8>_0 (blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<8>1)
+     MUXCY:CI->O           1   0.042   0.000  blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<9>_0 (blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<9>1)
+     MUXCY:CI->O           1   0.524   0.390  blinker_0/USER_LOGIC_I/Mcompar_count_cmp_ge0000_cy<10>_0 (led)
+     end scope: 'blinker_0'
+     OBUF:I->O                 2.851          led_pin_OBUF (led_pin)
+    ----------------------------------------
+    Total                      5.813ns (4.813ns logic, 1.000ns route)
+                                       (82.8% logic, 17.2% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Delay:               5.160ns (Levels of Logic = 4)
+  Source:            sys_rst_pin (PAD)
+  Destination:       fpga_0_ORGate_1_Res_1_pin (PAD)
+
+  Data Path: sys_rst_pin to fpga_0_ORGate_1_Res_1_pin
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.919   0.610  sys_rst_pin_IBUF (sys_rst_pin_IBUF)
+     begin scope: 'ORGate_1'
+     LUT2:I0->O            3   0.313   0.467  ORGate_1/Res1 (Res)
+     end scope: 'ORGate_1'
+     OBUF:I->O                 2.851          fpga_0_ORGate_1_Res_1_pin_OBUF (fpga_0_ORGate_1_Res_1_pin)
+    ----------------------------------------
+    Total                      5.160ns (4.083ns logic, 1.077ns route)
+                                       (79.1% logic, 20.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.33 secs
+ 
+--> 
+
+Total memory usage is 206776 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :   17 (   0 filtered)
+

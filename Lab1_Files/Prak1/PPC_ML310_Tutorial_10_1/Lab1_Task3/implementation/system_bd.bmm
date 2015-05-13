@@ -1,0 +1,55 @@
+// BMM LOC annotation file.
+//
+// Release 10.1i - Data2MEM K.39, build 1.5.7 Nov 8, 2007
+// Copyright (c) 1995-2014 Xilinx, Inc.  All rights reserved.
+//
+// Created on 05/13/14 04:37 pm
+//
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// Processor 'ppc405_0', ID 100, memory map.
+//
+///////////////////////////////////////////////////////////////////////////////
+
+ADDRESS_MAP ppc405_0 PPC405 100
+
+
+    ///////////////////////////////////////////////////////////////////////////////
+    //
+    // Processor 'ppc405_0' address space 'xps_bram_if_cntlr_2_bram_combined' 0x00000000:0x00001FFF (8 KB).
+    //
+    ///////////////////////////////////////////////////////////////////////////////
+
+    ADDRESS_SPACE xps_bram_if_cntlr_2_bram_combined RAMB16 [0x00000000:0x00001FFF]
+        BUS_BLOCK
+            xps_bram_if_cntlr_2_bram/xps_bram_if_cntlr_2_bram/ramb16_s9_s9_0 [31:24] PLACED = X4Y10;
+            xps_bram_if_cntlr_2_bram/xps_bram_if_cntlr_2_bram/ramb16_s9_s9_1 [23:16] PLACED = X3Y10;
+            xps_bram_if_cntlr_2_bram/xps_bram_if_cntlr_2_bram/ramb16_s9_s9_2 [15:8] PLACED = X4Y9;
+            xps_bram_if_cntlr_2_bram/xps_bram_if_cntlr_2_bram/ramb16_s9_s9_3 [7:0] PLACED = X3Y11;
+        END_BUS_BLOCK;
+    END_ADDRESS_SPACE;
+
+
+    ///////////////////////////////////////////////////////////////////////////////
+    //
+    // Processor 'ppc405_0' address space 'plb_bram_if_cntlr_1_bram_combined' 0xFFFFC000:0xFFFFFFFF (16 KB).
+    //
+    ///////////////////////////////////////////////////////////////////////////////
+
+    ADDRESS_SPACE plb_bram_if_cntlr_1_bram_combined RAMB16 [0xFFFFC000:0xFFFFFFFF]
+        BUS_BLOCK
+            plb_bram_if_cntlr_1_bram/plb_bram_if_cntlr_1_bram/ramb16_s9_s9_0 [63:56] PLACED = X5Y12;
+            plb_bram_if_cntlr_1_bram/plb_bram_if_cntlr_1_bram/ramb16_s9_s9_1 [55:48] PLACED = X3Y12;
+            plb_bram_if_cntlr_1_bram/plb_bram_if_cntlr_1_bram/ramb16_s9_s9_2 [47:40] PLACED = X4Y13;
+            plb_bram_if_cntlr_1_bram/plb_bram_if_cntlr_1_bram/ramb16_s9_s9_3 [39:32] PLACED = X4Y14;
+            plb_bram_if_cntlr_1_bram/plb_bram_if_cntlr_1_bram/ramb16_s9_s9_4 [31:24] PLACED = X5Y13;
+            plb_bram_if_cntlr_1_bram/plb_bram_if_cntlr_1_bram/ramb16_s9_s9_5 [23:16] PLACED = X3Y13;
+            plb_bram_if_cntlr_1_bram/plb_bram_if_cntlr_1_bram/ramb16_s9_s9_6 [15:8] PLACED = X4Y12;
+            plb_bram_if_cntlr_1_bram/plb_bram_if_cntlr_1_bram/ramb16_s9_s9_7 [7:0] PLACED = X4Y11;
+        END_BUS_BLOCK;
+    END_ADDRESS_SPACE;
+
+END_ADDRESS_MAP;
+
